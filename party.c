@@ -37,6 +37,7 @@ void student_task(int num) {
     sem_wait(&in_taxi);
     get_in(num);
     sem_post(&stud_lock);
+    sleep(generate_random());
     pthread_exit(0);
 }
 
@@ -46,6 +47,7 @@ void taxi_task(int num) {
     sem_wait(&stud_lock);
     printf("Taxi %d: I have one student %d... When will I find the other passengers? Sigh. The students seem to have too much fun these days.\n\n", num, taxi_list[0]);
     sem_wait(&stud_lock);
+    sleep(generate_random());
     printf("Taxi %d: I have two  %d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days\n\n", num, taxi_list[0], taxi_list[1]);
     sem_wait(&stud_lock);
     printf("Taxi %d: I have three students %d,%d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2]);
@@ -55,6 +57,7 @@ void taxi_task(int num) {
         sem_post(&in_taxi);
         taxi_list[i] = -1;
     }
+    sleep(generate_random());
     sem_post(&taxi_lock);
     pthread_exit(0);
 }
@@ -69,7 +72,7 @@ int main(int argc, char **argv) {
         num_taxis = atoi(argv[4]);
         max_time = atoi(argv[6]);
     }
-
+    sleep(generate_random());
     pthread_t students[num_students];
     pthread_t taxis[num_taxis];
     sem_init(&in_taxi, 0, 4);
