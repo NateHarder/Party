@@ -31,9 +31,9 @@ int generate_random() {
 }
 
 void student_task(int num) {
-    printf("Student %d: I am at the party. It is way more fun than what I expected...", num);
+    printf("Student %d: I am at the party. It is way more fun than what I expected...\n\n", num);
     sleep(generate_random());
-    printf("Student %d: I am done partying . I better get back to that calculus homework that is due tomorrow...", num);
+    printf("Student %d: I am done partying . I better get back to that calculus homework that is due tomorrow...\n\n", num);
     sem_wait(&in_taxi);
     get_in(num);
     sem_post(&stud_lock);
@@ -42,15 +42,19 @@ void student_task(int num) {
 
 void taxi_task(int num) {
     sem_wait(&taxi_lock);
-    printf("Taxi %d: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..", num);
+    printf("Taxi %d: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..\n\n", num);
     sem_wait(&stud_lock);
-    printf("Taxi %d: I have one student %d... When will I find the other passengers? Sigh. The students seem to have too much fun these days. ", num, taxi_list[0]);
+    printf("Taxi %d: I have one student %d... When will I find the other passengers? Sigh. The students seem to have too much fun these days.\n\n", num, taxi_list[0]);
     sem_wait(&stud_lock);
-    printf("Taxi %d: I have two  %d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days", num, taxi_list[0], taxi_list[1]);
+    printf("Taxi %d: I have two  %d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days\n\n", num, taxi_list[0], taxi_list[1]);
     sem_wait(&stud_lock);
-    printf("Taxi 1 : I have three students %d,%d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days", num, taxi_list[0], taxi_list[1], taxi_list[2]);
+    printf("Taxi %d: I have three students %d,%d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2]);
     sem_wait(&stud_lock);
-    printf("Taxi 1 : I have all four... 1,5,6,7 Time to drive....BYE", num, taxi_list[0], taxi_list[1], taxi_list[2], taxi_list[3]);
+    printf("Taxi %d: I have all four... %d,%d,%d,%d Time to drive....BYE\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2], taxi_list[3]);
+    for(int i = 0; i < 4; i++) {
+        sem_post(&in_taxi);
+        taxi_list[i] = -1;
+    }
     sem_post(&taxi_lock);
     pthread_exit(0);
 }
