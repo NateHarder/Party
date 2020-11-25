@@ -87,6 +87,7 @@ void student_task(int num) {
     printf("Student %d: I am at the party. It is way more fun than what I expected...\n\n", num);
     sleep(generate_random());
     printf("Student %d: I am done partying . I better get back to that calculus homework that is due tomorrow...\n\n", num);
+    //sleep(generate_random());
     /* If no seats are left wait for the next taxi, otherwise decrement the number of seats. */
     sem_wait(&seat_lock);
     if (seats_left == 0) {
@@ -94,10 +95,10 @@ void student_task(int num) {
     } else {
         seats_left--;
     }
-    sem_post(&seat_lock);
     /* When a seat is available, get in, then unlock the stud_lock so the taxi will do its next task, then exit the thread. */
     get_in(num);
     //sleep(generate_random());
+    sem_post(&seat_lock);
     sem_post(&stud_lock);
     pthread_exit(0);
 }
@@ -111,6 +112,7 @@ Brief description of the task: Decrements the taxi_lock so other taxis wait, the
 void taxi_task(int num) {
     /* Make other taxi threads wait, print arrival message, then wait for a student thread to finish and post stud_lock before continuing. */
     sem_wait(&taxi_lock);
+    sleep(generate_random());
     printf("Taxi %d: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..\n\n", num);
     sem_wait(&stud_lock);
     /* When a student has arrived, print a message then wait for the next student to post stud_lock. */
@@ -122,7 +124,6 @@ void taxi_task(int num) {
     /* Repeat the process for the third student. */
     printf("Taxi %d: I have three students %d,%d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2]);
     sem_wait(&stud_lock);
-    
     /* When the fourth student arrives, print a departure message, return the number of seats left to four, and clear the taxi_list array of students to simulate the next taxi arriving. */
     printf("Taxi %d: I have all four... %d,%d,%d,%d Time to drive....BYE\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2], taxi_list[3]);
     seats_left = 4;
@@ -145,7 +146,7 @@ Brief description of the task: Handles the given arguments and checks to make su
 void handle_args(int argc, char **argv) {
     /* If not enough arguments are given print error then exit. */
     if (argc != 7) {
-        printf("Invalid arguments. Use format [./party –s [number of students] –t [number of taxis] –m [max party time]].\n";);
+        printf("Invalid arguments. Use format [./party –s [number of students] –t [number of taxis] –m [max party time]].\n");
         exit(0);
     } else {
         /* If the arguments are given in the correct format set all values to the values of the given arguments. */        
@@ -161,7 +162,7 @@ void handle_args(int argc, char **argv) {
             }
         /* If the arguments aren't in the right format, print an error and exit. */
         } else {
-            printf("Invalid arguments. The input arguments must use the argument specifiers -s, -t, and -m, each followed by a positive integer to represent the number of students, number of taxis, and the maximum party time.\n";);
+            printf("Invalid arguments. The input arguments must use the argument specifiers -s, -t, and -m, each followed by a positive integer to represent the number of students, number of taxis, and the maximum party time.\n");
             exit(0);
         }
         /* Set seats_left to four and if there aren't four students for each taxi, print an error and exit. */
@@ -191,14 +192,20 @@ int main(int argc, char **argv) {
     sem_init(&seat_lock, 0, 1);
     sem_init(&enter_lock,0, 1);
 
+
+    /* Create each taxi thread in the array and pass the taxi number. */
+    for (int i = 0; i < num_taxis; i++) {
+        pthread_create(&taxis[i], NULL, (void *) (*taxi_task), (void *) (uintptr_t) i);
+    }
+
     /* Create each student thread in the array and pass the student number. */
     for (int i = 0; i < num_students; i++) {
         pthread_create(&students[i], NULL, (void *) (*student_task), (void *) (uintptr_t) i);
     }
 
-    /* Create each taxi thread in the array and pass the taxi number. */
+    /* Join to each taxi thread and wait for each to exit. */
     for (int i = 0; i < num_taxis; i++) {
-        pthread_create(&taxis[i], NULL, (void *) (*taxi_task), (void *) (uintptr_t) i);
+        pthread_join(taxis[i], NULL);
     }
 
     /* Join to each student thread and wait for each to exit. */
@@ -206,8 +213,4 @@ int main(int argc, char **argv) {
         pthread_join(students[i], NULL);
     }
 
-    /* Join to each taxi thread and wait for each to exit. */
-    for (int i = 0; i < num_taxis; i++) {
-        pthread_join(taxis[i], NULL);
-    }
 }
