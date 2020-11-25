@@ -96,7 +96,6 @@ void student_task(int num) {
     }
     sem_post(&seat_lock);
     /* When a seat is available, get in, then unlock the stud_lock so the taxi will do its next task, then exit the thread. */
-    sleep(generate_random());
     get_in(num);
     //sleep(generate_random());
     sem_post(&stud_lock);
@@ -132,7 +131,6 @@ void taxi_task(int num) {
     }
     /* Increment in_taxi and taxi_lock so that the next taxi arrives and the next student can get in, then exit the thread. */
     sem_post(&in_taxi);
-    sleep(generate_random());
     sem_post(&taxi_lock);
     pthread_exit(0);
 }
@@ -146,10 +144,10 @@ Brief description of the task: Handles the given arguments and checks to make su
 */
 void handle_args(int argc, char **argv) {
     /* Define an error message showing the proper format for the arguments. */
-    char *input_error_message = "Invalid arguments. Use format [./party –s [number of students] –t [number of taxis] –m [max party time]].\n";
+    char *input_error_message = 
     /* If not enough arguments are given print error then exit. */
     if (argc != 7) {
-        printf(input_error_message);
+        printf("Invalid arguments. Use format [./party –s [number of students] –t [number of taxis] –m [max party time]].\n";);
         exit(0);
     } else {
         /* If the arguments are given in the correct format set all values to the values of the given arguments. */        
@@ -165,7 +163,7 @@ void handle_args(int argc, char **argv) {
             }
         /* If the arguments aren't in the right format, print an error and exit. */
         } else {
-            printf(input_error_message);
+            printf("Invalid arguments. The input arguments must use the argument specifiers -s, -t, and -m, each followed by a positive integer to represent the number of students, number of taxis, and the maximum party time.\n";);
             exit(0);
         }
         /* Set seats_left to four and if there aren't four students for each taxi, print an error and exit. */
