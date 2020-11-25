@@ -143,8 +143,6 @@ Output(Return value): None.
 Brief description of the task: Handles the given arguments and checks to make sure they fit in the specified format. If they do, set the number of students and taxis and the max time limit to the values given. If they don't print an error message and exit.
 */
 void handle_args(int argc, char **argv) {
-    /* Define an error message showing the proper format for the arguments. */
-    char *input_error_message = 
     /* If not enough arguments are given print error then exit. */
     if (argc != 7) {
         printf("Invalid arguments. Use format [./party –s [number of students] –t [number of taxis] –m [max party time]].\n";);
