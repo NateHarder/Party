@@ -1,0 +1,23 @@
+/*
+Authors: Nathaniel Harder, Brendan Embrey
+Assignment Number: 3
+Date of Submission: 11/25/20
+Name of this file: README
+*/
+
+To compile and run this program, type:
+
+gcc party.c –o party.out –lpthread
+
+in a terminal, press enter,
+
+Then run it using the format
+
+./party.out s [number of students] –t [number of taxis] –m [max wait time] 
+
+again pressing enter,
+
+
+[number of students] is the number of students at the party, [number of taxis] is the number of taxis (must be one taxi for every 4 students), and [max wait time] is the maximum times spent at the party.
+
+Limitations: The program requires the formatting of the arguments to follow the above format, and that there must be exactly 4 students for every taxi. Also, If the max wait time is set to 1, the students will all leave near the same time which can make it hard to tell which student leaves first in the output.
