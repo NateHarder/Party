@@ -20,4 +20,4 @@ again pressing enter,
 
 [number of students] is the number of students at the party, [number of taxis] is the number of taxis (must be one taxi for every 4 students), and [max wait time] is the maximum times spent at the party.
 
-Limitations: The program requires the formatting of the arguments to follow the above format, and that there must be exactly 4 students for every taxi.
+Limitations: The program requires the formatting of the arguments to follow the above format, and that there must be exactly 4 students for every taxi. Also, If the max wait time is set to 1, the students will all leave near the same time which can make it hard to tell which student leaves first in the output.
