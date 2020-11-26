@@ -264,8 +264,89 @@ Taxi 2: I have three students 10,7, 11 When will I find the other passengers? Si
 Taxi 2: I have all four... 10,7,11,3 Time to drive....BYE
 
 
+
+
+
 The following run of the program was performed with arguments:
 
 ./party.out -s 12 -t 3 -m 10
 
 With the sleep(generate_random()) functions on line 124 and line 97 uncommented to produce random extra times for both taxis and students.
+
+Taxi 0: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Student 0: I am at the party. It is way more fun than what I expected...
+
+Student 2: I am at the party. It is way more fun than what I expected...
+
+Student 4: I am at the party. It is way more fun than what I expected...
+
+Student 5: I am at the party. It is way more fun than what I expected...
+
+Student 6: I am at the party. It is way more fun than what I expected...
+
+Student 8: I am at the party. It is way more fun than what I expected...
+
+Student 10: I am at the party. It is way more fun than what I expected...
+
+Student 10: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 3: I am at the party. It is way more fun than what I expected...
+
+Student 7: I am at the party. It is way more fun than what I expected...
+
+Student 9: I am at the party. It is way more fun than what I expected...
+
+Student 11: I am at the party. It is way more fun than what I expected...
+
+Student 1: I am at the party. It is way more fun than what I expected...
+
+Student 6: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 7: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 5: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 3: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 8: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 1: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 0: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 4: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have one student 10... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Student 11: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 9: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have two  10, 6 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 2: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have three students 10,6, 7 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 0: I have all four... 10,6,7,5 Time to drive....BYE
+
+Taxi 2: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Taxi 2: I have one student 3... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Taxi 2: I have two  3, 8 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 2: I have three students 3,8, 1 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 2: I have all four... 3,8,1,0 Time to drive....BYE
+
+Taxi 1: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Taxi 1: I have one student 4... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Taxi 1: I have two  4, 11 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 1: I have three students 4,11, 9 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 1: I have all four... 4,11,9,2 Time to drive....BYE

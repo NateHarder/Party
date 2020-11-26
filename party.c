@@ -33,14 +33,14 @@ int seats_left;
 int taxi_list[4] = {-1,-1,-1,-1};
 
 /* Semaphore used to block taxi threads until a new student leaves the party. */
-sem_t stud_lock;
+sem_t student_lock;
 /* Semaphore used to block taxi threads from arriving all at once. */
 sem_t taxi_lock;
 /* Semaphore used to block student threads from entering a taxi if the taxi_list is full. */
-sem_t in_taxi;
+sem_t full_taxi;
 /* Semaphore used to keep multiple students from decrementing the seats left. */
 sem_t seat_lock;
-/* Semaphore used to keep multiple students from getting in a taxi.  */
+/* Semaphore used to keep multiple students from getting in a taxi at once.  */
 sem_t enter_lock;
 
 /*
@@ -79,7 +79,7 @@ int generate_random() {
 Function Name: student_task
 Input to the method: Student number integer.
 Output(Return value): None. 
-Brief description of the task: Prints a message saying the student has arrived, waits for a random amount of time, prints a message saing the sudent is leaving, then either waits for an empty seat or gets in a taxi if a seat is available.
+Brief description of the task: Prints a message saying the student has arrived, waits for a random amount of time, prints a message saying the student is leaving, then either waits for an empty seat or gets in a taxi if a seat is available.
 */
 void student_task(int num) {
     /* Print arrival message, sleep for a random time, then prints departure message. */
@@ -89,14 +89,14 @@ void student_task(int num) {
     /* If no seats are left wait for the next taxi, otherwise decrement the number of seats. */
     sem_wait(&seat_lock);
     if (seats_left == 0) {
-        sem_wait(&in_taxi);
+        sem_wait(&full_taxi);
     }
     seats_left--;
-    /* When a seat is available, get in, then unlock the stud_lock so the taxi will do its next task, then exit the thread. */
+    /* When a seat is available, get in, then unlock the student_lock so the taxi will do its next task, then exit the thread. */
     get_in(num);
     //sleep(generate_random());
     sem_post(&seat_lock);
-    sem_post(&stud_lock);
+    sem_post(&student_lock);
     pthread_exit(0);
 }
 
@@ -104,22 +104,22 @@ void student_task(int num) {
 Function Name: taxi_task
 Input to the method: Taxi number integer.
 Output(Return value): None. 
-Brief description of the task: Decrements the taxi_lock so other taxis wait, then prints an arrival message, and waits for stud_lock to be incremented to print the next message saying a new student has gotten in. Then, when four students are in, print a departure message, clear the taxi_list array of open seats, then post the in_taxi semaphore so the next student gets in a new taxi, and posts the taxi_lock semaphore so a new taxi arrives, then exits the thread. 
+Brief description of the task: Decrements the taxi_lock so other taxis wait, then prints an arrival message, and waits for student_lock to be incremented to print the next message saying a new student has gotten in. Then, when four students are in, print a departure message, clear the taxi_list array of open seats, then post the full_taxi semaphore so the next student gets in a new taxi, and posts the taxi_lock semaphore so a new taxi arrives, then exits the thread. 
 */
 void taxi_task(int num) {
-    /* Make other taxi threads wait, print arrival message, then wait for a student thread to finish and post stud_lock before continuing. */
+    /* Make other taxi threads wait, print arrival message, then wait for a student thread to finish and post student_lock before continuing. */
     sem_wait(&taxi_lock);
     printf("Taxi %d: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..\n\n", num);
-    sem_wait(&stud_lock);
-    /* When a student has arrived, print a message then wait for the next student to post stud_lock. */
+    sem_wait(&student_lock);
+    /* When a student has arrived, print a message then wait for the next student to post student_lock. */
     printf("Taxi %d: I have one student %d... When will I find the other passengers? Sigh. The students seem to have too much fun these days.\n\n", num, taxi_list[0]);
-    sem_wait(&stud_lock);
+    sem_wait(&student_lock);
     /* Repeat the process for the second student. */
     printf("Taxi %d: I have two  %d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days\n\n", num, taxi_list[0], taxi_list[1]);
-    sem_wait(&stud_lock);
+    sem_wait(&student_lock);
     /* Repeat the process for the third student. */
     printf("Taxi %d: I have three students %d,%d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2]);
-    sem_wait(&stud_lock);
+    sem_wait(&student_lock);
     /* When the fourth student arrives, print a departure message, return the number of seats left to four, and clear the taxi_list array of students to simulate the next taxi arriving. */
     //sleep(generate_random());
     printf("Taxi %d: I have all four... %d,%d,%d,%d Time to drive....BYE\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2], taxi_list[3]);
@@ -127,8 +127,8 @@ void taxi_task(int num) {
     for(int i = 0; i < 4; i++) {
         taxi_list[i] = -1;
     }
-    /* Increment in_taxi and taxi_lock so that the next taxi arrives and the next student can get in, then exit the thread. */
-    sem_post(&in_taxi);
+    /* Increment full_taxi and taxi_lock so that the next taxi arrives and the next student can get in, then exit the thread. */
+    sem_post(&full_taxi);
     sem_post(&taxi_lock);
     pthread_exit(0);
 }
@@ -183,12 +183,11 @@ int main(int argc, char **argv) {
     /* Initialize student and taxi thread arrays then initialize semaphores. */
     pthread_t students[num_students];
     pthread_t taxis[num_taxis];
-    sem_init(&stud_lock, 0, 0);
+    sem_init(&student_lock, 0, 0);
     sem_init(&taxi_lock, 0, 1);
-    sem_init(&in_taxi, 0, 0);
+    sem_init(&full_taxi, 0, 0);
     sem_init(&seat_lock, 0, 1);
     sem_init(&enter_lock,0, 1);
-
 
     /* Create each taxi thread in the array and pass the taxi number. */
     for (int i = 0; i < num_taxis; i++) {
