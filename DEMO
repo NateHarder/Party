@@ -11,93 +11,7 @@ The following run of the program was performed with arguments:
 
 With no additional pauses in the code.
 
-Student 0: I am at the party. It is way more fun than what I expected...
-
-Student 2: I am at the party. It is way more fun than what I expected...
-
-Student 3: I am at the party. It is way more fun than what I expected...
-
-Student 4: I am at the party. It is way more fun than what I expected...
-
-Student 5: I am at the party. It is way more fun than what I expected...
-
-Student 6: I am at the party. It is way more fun than what I expected...
-
-Student 8: I am at the party. It is way more fun than what I expected...
-
-Student 10: I am at the party. It is way more fun than what I expected...
-
-Student 8: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 11: I am at the party. It is way more fun than what I expected...
-
 Taxi 0: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Taxi 0: I have one student 8... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 7: I am at the party. It is way more fun than what I expected...
-
-Student 1: I am at the party. It is way more fun than what I expected...
-
-Student 9: I am at the party. It is way more fun than what I expected...
-
-Student 5: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 0: I have two  8, 5 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 7: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 0: I have three students 8,5, 7 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 4: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 0: I have all four... 8,5,7,4 Time to drive....BYE
-
-Taxi 1: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Student 11: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have one student 11... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 6: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have two  11, 6 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 0: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 3: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have three students 11,6, 0 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Taxi 1: I have all four... 11,6,0,3 Time to drive....BYE
-
-Taxi 2: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Student 10: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have one student 10... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 9: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have two  10, 9 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 1: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have three students 10,9, 1 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 2: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have all four... 10,9,1,2 Time to drive....BYE
-
-
-
-
-
-The following run of the program was performed with arguments:
-
-./party.out -s 12 -t 3 -m 10
-
-With the function call sleep(generate_random()) placed before line 90 and line 99.
 
 Student 0: I am at the party. It is way more fun than what I expected...
 
@@ -105,11 +19,9 @@ Student 1: I am at the party. It is way more fun than what I expected...
 
 Student 2: I am at the party. It is way more fun than what I expected...
 
-Student 5: I am at the party. It is way more fun than what I expected...
-
 Student 3: I am at the party. It is way more fun than what I expected...
 
-Student 4: I am at the party. It is way more fun than what I expected...
+Student 5: I am at the party. It is way more fun than what I expected...
 
 Student 6: I am at the party. It is way more fun than what I expected...
 
@@ -117,240 +29,243 @@ Student 7: I am at the party. It is way more fun than what I expected...
 
 Student 8: I am at the party. It is way more fun than what I expected...
 
-Student 6: I am done partying . I better get back to that calculus homework that is due tomorrow...
+Student 7: I am done partying . I better get back to that calculus homework that is due tomorrow...
 
 Student 9: I am at the party. It is way more fun than what I expected...
 
-Student 10: I am at the party. It is way more fun than what I expected...
-
-Taxi 1: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Student 11: I am at the party. It is way more fun than what I expected...
-
-Student 3: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 5: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 8: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 4: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 11: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 1: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 0: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 7: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have one student 3... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 10: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 9: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have two  3, 6 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 2: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have three students 3,6, 5 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Taxi 1: I have all four... 3,6,5,11 Time to drive....BYE
-
-Taxi 0: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Taxi 0: I have one student 0... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Taxi 0: I have two  0, 1 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Taxi 0: I have three students 0,1, 9 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Taxi 0: I have all four... 0,1,9,7 Time to drive....BYE
-
-Taxi 2: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Taxi 2: I have one student 8... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Taxi 2: I have two  8, 4 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Taxi 2: I have three students 8,4, 2 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Taxi 2: I have all four... 8,4,2,10 Time to drive....BYE
-
-
-
-
-
-
-The following run of the program was performed with arguments:
-
-./party.out -s 12 -t 3 -m 10
-
-With the function call sleep(generate_random()) placed before line 114 and line 134.
-
-Student 0: I am at the party. It is way more fun than what I expected...
-
-Student 1: I am at the party. It is way more fun than what I expected...
-
-Student 3: I am at the party. It is way more fun than what I expected...
-
-Student 5: I am at the party. It is way more fun than what I expected...
-
 Student 4: I am at the party. It is way more fun than what I expected...
-
-Student 6: I am at the party. It is way more fun than what I expected...
-
-Student 7: I am at the party. It is way more fun than what I expected...
-
-Student 8: I am at the party. It is way more fun than what I expected...
-
-Student 7: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 11: I am at the party. It is way more fun than what I expected...
-
-Taxi 0: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
 
 Taxi 0: I have one student 7... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
 
-Student 10: I am at the party. It is way more fun than what I expected...
-
-Student 9: I am at the party. It is way more fun than what I expected...
-
-Student 2: I am at the party. It is way more fun than what I expected...
-
-Student 4: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 0: I have two  7, 4 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 10: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 0: I have three students 7,4, 10 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 5: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 0: I have all four... 7,4,10,5 Time to drive....BYE
-
-Taxi 1: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Student 11: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have one student 11... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 6: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have two  11, 6 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 0: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Student 3: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have three students 11,6, 0 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Taxi 1: I have all four... 11,6,0,3 Time to drive....BYE
-
-Student 8: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Taxi 2: I have one student 8... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 2: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have two  8, 2 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 9: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have three students 8,2, 9 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 1: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have all four... 8,2,9,1 Time to drive....BYE
-
-
-
-
-
-
-The following run of the program was performed with arguments:
-
-./party.out -s 12 -t 3 -m 10
-
-With the function call sleep(generate_random()) placed before line 99 and line 134.
-
-Student 0: I am at the party. It is way more fun than what I expected...
-
-Student 3: I am at the party. It is way more fun than what I expected...
-
-Student 1: I am at the party. It is way more fun than what I expected...
-
-Student 4: I am at the party. It is way more fun than what I expected...
-
-Student 5: I am at the party. It is way more fun than what I expected...
-
-Student 6: I am at the party. It is way more fun than what I expected...
-
-Student 7: I am at the party. It is way more fun than what I expected...
-
-Student 7: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
 Student 11: I am at the party. It is way more fun than what I expected...
 
-Taxi 0: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Taxi 0: I have one student 7... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 2: I am at the party. It is way more fun than what I expected...
-
 Student 10: I am at the party. It is way more fun than what I expected...
-
-Student 8: I am at the party. It is way more fun than what I expected...
-
-Student 9: I am at the party. It is way more fun than what I expected...
 
 Student 5: I am done partying . I better get back to that calculus homework that is due tomorrow...
 
 Taxi 0: I have two  7, 5 When will I find the other passengers? Sigh. The students seem to have too much fun these days
 
-Student 10: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 0: I have three students 7,5, 10 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
 Student 4: I am done partying . I better get back to that calculus homework that is due tomorrow...
 
-Taxi 0: I have all four... 7,5,10,4 Time to drive....BYE
-
-Taxi 1: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Student 2: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have one student 2... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 6: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have two  2, 6 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 0: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have three students 2,6, 0 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 1: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 1: I have all four... 2,6,0,1 Time to drive....BYE
-
-Taxi 2: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
-
-Student 11: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have one student 11... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
-
-Student 9: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have two  11, 9 When will I find the other passengers? Sigh. The students seem to have too much fun these days
-
-Student 8: I am done partying . I better get back to that calculus homework that is due tomorrow...
-
-Taxi 2: I have three students 11,9, 8 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+Taxi 0: I have three students 7,5, 4 When will I find the other passengers? Sigh. The students seem to have too much fun these days
 
 Student 3: I am done partying . I better get back to that calculus homework that is due tomorrow...
 
-Taxi 2: I have all four... 11,9,8,3 Time to drive....BYE
+Taxi 0: I have all four... 7,5,4,3 Time to drive....BYE
+
+Taxi 1: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Student 9: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 1: I have one student 9... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Student 6: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 1: I have two  9, 6 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 0: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 1: I have three students 9,6, 0 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 2: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 1: I have all four... 9,6,0,2 Time to drive....BYE
+
+Taxi 2: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Student 8: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 2: I have one student 8... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Student 10: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 2: I have two  8, 10 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 11: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 2: I have three students 8,10, 11 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 1: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 2: I have all four... 8,10,11,1 Time to drive....BYE
+
+
+
+
+The following run of the program was performed with arguments:
+
+./party.out -s 12 -t 3 -m 10
+
+With the sleep(generate_random()) function on line 97 uncommented to produce random extra times for students.
+
+Taxi 0: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Student 0: I am at the party. It is way more fun than what I expected...
+
+Student 1: I am at the party. It is way more fun than what I expected...
+
+Student 2: I am at the party. It is way more fun than what I expected...
+
+Student 3: I am at the party. It is way more fun than what I expected...
+
+Student 5: I am at the party. It is way more fun than what I expected...
+
+Student 4: I am at the party. It is way more fun than what I expected...
+
+Student 6: I am at the party. It is way more fun than what I expected...
+
+Student 7: I am at the party. It is way more fun than what I expected...
+
+Student 6: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 8: I am at the party. It is way more fun than what I expected...
+
+Student 9: I am at the party. It is way more fun than what I expected...
+
+Student 10: I am at the party. It is way more fun than what I expected...
+
+Student 11: I am at the party. It is way more fun than what I expected...
+
+Student 5: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 8: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 3: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have one student 6... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Student 4: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 11: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 0: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 2: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 7: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have two  6, 5 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 10: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 9: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 1: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have three students 6,5, 8 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 0: I have all four... 6,5,8,3 Time to drive....BYE
+
+Taxi 2: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Taxi 2: I have one student 4... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Taxi 2: I have two  4, 11 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 2: I have three students 4,11, 0 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 2: I have all four... 4,11,0,2 Time to drive....BYE
+
+Taxi 1: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Taxi 1: I have one student 7... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Taxi 1: I have two  7, 10 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 1: I have three students 7,10, 9 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 1: I have all four... 7,10,9,1 Time to drive....BYE
+
+
+
+
+The following run of the program was performed with arguments:
+
+./party.out -s 12 -t 3 -m 10
+
+With the sleep(generate_random()) function on line 124 uncommented to produce random extra times for taxis.
+
+Taxi 0: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Student 1: I am at the party. It is way more fun than what I expected...
+
+Student 3: I am at the party. It is way more fun than what I expected...
+
+Student 0: I am at the party. It is way more fun than what I expected...
+
+Student 2: I am at the party. It is way more fun than what I expected...
+
+Student 4: I am at the party. It is way more fun than what I expected...
+
+Student 8: I am at the party. It is way more fun than what I expected...
+
+Student 9: I am at the party. It is way more fun than what I expected...
+
+Student 10: I am at the party. It is way more fun than what I expected...
+
+Student 9: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 5: I am at the party. It is way more fun than what I expected...
+
+Student 6: I am at the party. It is way more fun than what I expected...
+
+Student 11: I am at the party. It is way more fun than what I expected...
+
+Taxi 0: I have one student 9... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Student 7: I am at the party. It is way more fun than what I expected...
+
+Student 4: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have two  9, 4 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 6: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have three students 9,4, 6 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 2: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 5: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 8: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 1: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 0: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 10: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 0: I have all four... 9,4,6,2 Time to drive....BYE
+
+Taxi 1: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Taxi 1: I have one student 5... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Taxi 1: I have two  5, 8 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 1: I have three students 5,8, 1 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Student 7: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 11: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Student 3: I am done partying . I better get back to that calculus homework that is due tomorrow...
+
+Taxi 1: I have all four... 5,8,1,0 Time to drive....BYE
+
+Taxi 2: I arrived at the curb...There is no one that wants to go home...I might as well take a nap..
+
+Taxi 2: I have one student 10... When will I find the other passengers? Sigh. The students seem to have too much fun these days.
+
+Taxi 2: I have two  10, 7 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 2: I have three students 10,7, 11 When will I find the other passengers? Sigh. The students seem to have too much fun these days
+
+Taxi 2: I have all four... 10,7,11,3 Time to drive....BYE
+
+
+The following run of the program was performed with arguments:
+
+./party.out -s 12 -t 3 -m 10
+
+With the sleep(generate_random()) functions on line 124 and line 97 uncommented to produce random extra times for both taxis and students.

@@ -19,7 +19,6 @@ The function get_in simulates a student entering the taxi by placing the student
 The function student_task simulates a student spending time at a party then enetring a taxi. The function taxi_task simulates a taxi waiting for four students then leaving. They were grouped together as they are the two functions which are used by the taxi and student threads.
 
 The function handle_args ensures that all of the arguments are given correctly. The function main passes arguments to handle_args and creates and waits for all of the student and taxi threads to finish. They were grouped together as they handle input from the user and begin the running of the program.
-
 */
 
 /* The number of students at the party. */
