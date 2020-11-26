@@ -95,7 +95,7 @@ void student_task(int num) {
     seats_left--;
     /* When a seat is available, get in, then unlock the stud_lock so the taxi will do its next task, then exit the thread. */
     get_in(num);
-    //sleep(generate_random());
+    sleep(generate_random());
     sem_post(&seat_lock);
     sem_post(&stud_lock);
     pthread_exit(0);
@@ -122,7 +122,7 @@ void taxi_task(int num) {
     printf("Taxi %d: I have three students %d,%d, %d When will I find the other passengers? Sigh. The students seem to have too much fun these days\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2]);
     sem_wait(&stud_lock);
     /* When the fourth student arrives, print a departure message, return the number of seats left to four, and clear the taxi_list array of students to simulate the next taxi arriving. */
-    //sleep(generate_random());
+    sleep(generate_random());
     printf("Taxi %d: I have all four... %d,%d,%d,%d Time to drive....BYE\n\n", num, taxi_list[0], taxi_list[1], taxi_list[2], taxi_list[3]);
     seats_left = 4;
     for(int i = 0; i < 4; i++) {
